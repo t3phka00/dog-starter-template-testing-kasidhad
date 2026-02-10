@@ -34,6 +34,39 @@ git clone <repository-url>
 cd dogapi
 ```
 
+#### (Optional) Remove Git History
+
+If you want to use this template for your own project without the original git history:
+
+**Using File Explorer (Easiest):**
+1. Open the project folder in File Explorer
+2. Enable "Show hidden files" (View → Show → Hidden items)
+3. Find and delete the `.git` folder
+
+**Using Command Line:**
+
+Windows (PowerShell):
+```powershell
+Remove-Item -Recurse -Force .git
+```
+
+Windows (Command Prompt):
+```cmd
+rmdir /s /q .git
+```
+
+macOS/Linux:
+```bash
+rm -rf .git
+```
+
+After removing the `.git` folder, you can initialize a new repository:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
 ### 2. Install Dependencies
 
 Install backend dependencies:
